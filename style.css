@@ -11,6 +11,7 @@
   margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .cell-100 {
@@ -42,4 +43,16 @@
 
 .bg-cyan {
   background-color: cyan;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+#grid.game-over {
+  pointer-events: none;
+}
+
+.block-click {
+  pointer-events: none;
 }
