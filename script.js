@@ -58,24 +58,19 @@ for(let i = 0; i<totalCells;i++){
     cell.innerText=i+1;
     
     cell.addEventListener('click', () => {
-        const isBomb = positionBombs.includes(i+1);
+        const isBomb = positionBombs.includes(i);
         if (isBomb) {
-            let prova = document.querySelectorAll('.cell');
-            for(let i =0; i<prova.length;i++){
-            
-                if(positionBombs.includes(i+1)){
-                    let bombDetected =prova[i];
-                    bombDetected.classList.add('bg-red');
-                    grid.classList.add('game-over');
-                    showScore(points);
-                }
-            }
+            cell.classList.add('bg-red');
+            grid.classList.add('game-over');
+            showScore(points);
         
         } else {
             cell.classList.add('bg-cyan');
             cell.classList.toggle('block-click');
             points+=1;
             console.log(points);
+           
+
         }
 
     });
