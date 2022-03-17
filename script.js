@@ -39,7 +39,6 @@ const totalCells = colums * rows;
 
 //creo array bombe
 const positionBombs = [];
-let bombsToCreate=16;
 let points= 0;
 //creo un ciclo per ogni cella della griglia
 
@@ -69,8 +68,6 @@ for(let i = 0; i<totalCells;i++){
             cell.classList.toggle('block-click');
             points+=1;
             console.log(points);
-           
-
         }
 
     });
@@ -78,8 +75,7 @@ for(let i = 0; i<totalCells;i++){
 function showScore(points){
     alert('Bravo! hai fatto ' + points + ' punti!');
 }
-
-
+ 
 //creo una funzione dove genero le celle
 function createCell() {
     const item = document.createElement('div');
